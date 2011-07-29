@@ -68,7 +68,11 @@
       as is the IP address where the Erlang node can be
       reached. Consistent and correct TCP naming services are
       therefore required for an Erlang network to function
-      correctly.</p>
+      correctly. This means that is not enough, for example, to simply register the complete
+      <c>Node@HostName</c> IP in system hosts file, instead <c>HostName</c> must be
+      reachable through DNS lookup service. To test correct naming routing, you can
+      use <c>nslookup</c> utility available for many OSes (ex: <c>nslookup *.mydomain.com</c>).      
+      </p>
 
     <taglist>
     <tag>Starting the port mapper daemon</tag>
